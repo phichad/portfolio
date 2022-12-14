@@ -1,0 +1,846 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+body {
+    min-height: 100vh;
+}
+
+/* --------------- Text styles --------------- */
+
+h1, h2, h3, button, label {
+    font-family:'Courier New', Courier, monospace;
+}
+h4, h5, p, li {
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+h1 {
+    font-size: 48pt;
+}
+h2 {
+    font-size: 24pt;
+}
+h3 {
+    font-size: 18pt;
+}
+h4 {
+    font-size: 16pt;
+}
+h5 {
+    font-size: 14pt;
+}
+p, li, label {
+    font-size: 16pt;
+}
+button, a {
+    font-size: 14pt;
+    border-radius: 4px;
+}
+
+
+/* --------------- Header CSS inline box --------------- */
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+.headerBG {
+    background-color:#3C6543;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.yellowSplotch {
+    position: absolute;
+    height: 100px;
+    width: auto;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+}
+.headerContent {
+    color: white;
+    background-color: transparent;
+    height: 100px;
+    width: auto;
+    position: relative;
+    z-index: 4;
+}
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+.logoBlock {
+    width: 100px;
+    height: 100%;
+    margin: 0 auto;
+}
+.logo {
+    width: 97px;
+    height: 52px;
+    padding: 15px 0 20px 2%;
+}
+.titleBlock {
+    width: 250px;
+    height: 100%;
+    margin: 0 auto;
+}
+.title {
+    color: black;
+    width: 100%;
+}
+.name {
+    margin: 0 auto;
+    padding: 15px 0 0 15px;
+}
+.job {
+    margin: 0 auto;
+    padding: 0 0 15px 15px;
+}
+nav {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    position: absolute;
+    right: 60px;
+}
+nav .burger {
+    display: none;
+}
+.headerNav {
+    margin-left: auto;
+    position: absolute;
+    right: 10px;
+    white-space: nowrap;
+}
+.navItem {
+    display: inline-block;
+    padding: 2%;
+    text-align: right;
+}
+.navButton {
+    background-color: #3C6543;
+    transition: all 0.3s ease;
+}
+.navButton:hover {
+    box-shadow: 0px 6px 6px #0F1E11;
+}
+.navButton:active {
+    background-color:#0F1E11;
+    box-shadow: none;
+}
+.navButton a{
+    color: white;
+    transition: all 0.3s ease;
+}
+.navButton a:link, .navButton a:visited {
+    color: white;
+    text-decoration: none;
+    cursor:pointer;
+} 
+.navButton a:link:active, .navButton a:visited:active {
+    text-shadow: 2px 2px 4px #373738;   
+}
+
+
+/* --------------- Hero CSS grid --------------- */
+
+.grid {
+    display: grid;
+}
+.heroSpace {
+    background-color: black;
+    height: 95%;
+    max-width: 100%;
+    padding-top: 100px;
+    position: relative;
+    left: 0px;
+    z-index: 1;
+}
+.heroContent {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 45% 20%;
+    grid-template-areas: 
+        "topLeft rightContent"
+        "midLeft rightContent"
+        "bottomLeft rightContent";
+    height: 100%;
+    max-width: 100%;
+    z-index: 2;
+}
+.heroBG {
+    background-color: black;
+    width: 100%;
+    z-index: -2;
+}
+.greenSplotch {
+    position: absolute;
+    height: 40%;
+    width: 60%;
+    left: 0px;
+    top: 100px;
+    z-index: -1;
+}
+.magentaSplotch {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    right: 0px;
+    top: 130px;
+    z-index: -1;
+}
+.topLeft {
+    grid-area: topLeft;
+}
+.midLeft {
+    grid-area: midLeft;
+}
+.bottomLeft {
+    grid-area: bottomLeft;
+}
+.rightContent {
+    grid-area: rightContent;
+}
+.selfPortrait {
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+    padding: 5% 0 0 20%;
+}
+#hi {
+    width: 100%;
+    color: #DDD819;
+    margin: 0 auto;
+    padding: 4% 2%;
+    text-shadow: -1px 1px 0 black;
+}
+#bioBox {
+    margin: 0 auto;
+    padding: 15% 5% 5% 5%;
+}
+#bio {
+    margin: auto;
+    font-size: 24pt;
+    line-height: 1.75;
+    color: white;
+}
+#buttonBox {
+    margin: auto;
+    padding: 100px, 0;
+    width: 100%;
+}
+.resumeButton {
+    font-size: 16pt;
+    font-weight: 800;
+    display: block;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    padding: 1% 2%;
+    box-shadow: -5px 10px #CD5500;
+    border: 2px solid #DDD819;
+    transition: all 0.3s ease;
+}
+.resumeButton:hover {
+    color:black;
+    font-size: 20pt;
+    font-weight: 800;
+    padding: 2% 4%;
+    box-shadow: -2.5px 5px #CD5500;
+    border: 4px solid #DDD819;
+}
+.resumeButton:active {
+    background-color: #DDD819;
+    border: 2px solid #CD5500;
+}
+.buttonLogo {
+    height: 24px;
+    vertical-align: text-bottom;
+}
+.resumeButton:hover .buttonLogo {
+    height: 32px;
+}
+.resumeLink {
+    color: black;
+    text-decoration: none;
+    font-size: 16pt;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+.resumeButton:hover .resumeLink {
+    color: black;
+    font-size: 20pt;
+    font-weight: 800;
+}
+.resumeButton:active .resumeLink {
+    color: black;
+    font-size: 20pt;
+    font-weight: 800;
+}
+
+/* --------------- My UX Skills CSS grid --------------- */
+
+.sectionHeader {
+    text-indent: 5%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.mySkills {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding-top: 100px;
+    position: relative;
+    left: 0px;
+    z-index: 1;
+}
+.skillDivs {
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "leftColumn midColumn rightColumn";
+}
+.leftColumn {
+    grid-area: leftColumn;
+    border: 1px solid black;
+}
+.midColumn {
+    grid-area: midColumn;
+    border: 1px solid black;
+}
+.rightColumn {
+    grid-area: rightColumn;
+    border: 1px solid black;
+}
+.nestedGrid {
+    display: grid;
+    justify-content: center;
+    align-content: space-around;
+    margin: auto;
+    padding: 5% 0 0 0;
+}
+.nestedGrid p {
+    justify-content: space-around;
+    padding: 0 10% 10% 10%;
+    text-align: center;
+}
+.skillTitle {
+    margin-bottom: 0;
+}
+.skillIcon {
+    font-size: 10em;
+}
+
+/* --------------- My Work/Projects CSS flex --------------- */
+
+.myWork {
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    z-index: 1;
+}
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.caseStudy {
+    width: 33%;
+    height: 100%;
+    text-align: center;
+}
+.projectTitle h2 {
+    margin: 0 auto;
+    padding: auto 0 0 auto;
+}
+.projectTitle h3 {
+    margin: 0 auto;
+    padding: 0 0 auto auto;
+    font-weight: 500;
+}
+.epaImg {
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+}
+.cdcImg {
+    width: 99%;
+    height: auto;
+    margin: 0 auto;
+}
+.wrcImg1 {
+    width: 32%;
+    height: auto;
+    margin: 0 auto;
+}
+.wrcImg2 {
+    width: 32%;
+    height: auto;
+    margin: 0 auto;
+}
+.wrcImg3 {
+    width: 32%;
+    height: auto;
+    margin: 0 auto;
+}
+.workImg {
+    padding-bottom: 30px;
+}
+.projectDescription {
+    text-align: center;
+    padding: 0 12%;
+}
+.workButton {
+    margin: 5% auto 10%;
+    padding: 1% 2%;
+    justify-content: end;
+    background-color: white;
+    border: 4px solid #DDD819;
+    box-shadow: -4px 6px #AE3555;
+    transition: all 0.3s ease;
+}
+.workButton:hover {
+    border: 6px solid #DDD819;
+    box-shadow: -4px 6px 4px #AE3555;
+}
+.workButton:active {
+    background-color: #DDD819;
+    border: 4px solid #AE3555;
+    box-shadow: none;
+}
+.workLink {
+    color: black;
+    font-weight: 800;
+    text-decoration: none;
+}
+.workButton:hover .workLink {
+    font-size: 18pt;
+    font-weight: 800;
+}
+.workButton:active .workLink {
+    font-weight: 800;
+}
+
+/* --------------- Contact CSS --------------- */
+#contactSect {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding-top: 100px;
+    position: relative;
+    left: 0px;
+    z-index: 1;
+}
+.contCont {
+    width: 33%;
+    padding: 1%;
+    margin: 0 2% 5% 2%;
+    border: 4px solid #3C6543;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px #0F1E11;
+    text-align: center;
+}
+.contactBorder{
+    margin: 0 5%;
+}
+.iconSoc {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    stroke-width: 0px;
+    stroke: #000000;
+    fill: #000000;
+    background-color: #ffffff;
+    border: 4px solid #ffffff;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .iconSoc:hover {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    stroke-width: 1px;
+    stroke: #000000;
+    fill: #000000;
+    background-color: #ffffff;
+    border: 6px solid #ffffff;
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0px 6px 6px #000000;
+  }
+  .iconSoc:active {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    stroke-width: 2px;
+    stroke: #ffffff;
+    fill: #ffffff;
+    background-color: #3C6543;
+    border: 6px solid #3C6543;
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: none;
+  }
+  .emailLink {
+    color: black;
+  }
+  .emailLink:hover {
+    color: #3C6543;
+    font-size: larger;
+  }
+  .emailLink:active {
+    color: #83263E;
+  }
+
+/* --------------- Footer CSS --------------- */
+
+footer {
+    background-color: #373738;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    top: 0px;
+}
+footer ul {
+    display: inline-block;
+    vertical-align: top;
+    height: 100px;
+    width: 100%;
+    margin: auto;
+    padding: 5% 2% 0 2%;
+}
+footer li {
+    text-align: center;
+    padding: 0 7%;
+}
+.footerLink {
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.footerLink:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.footerLink:active {
+    color:#DDD819;
+    text-decoration: underline;
+}
+
+
+/* --------------- Media Queries --------------- */
+
+/* --------------- tablets --------------- */
+@media only screen and (max-width: 1024px) {
+    .titleBlock {
+        position: fixed;
+        left: 100px;
+    }
+    nav {
+        float: right;
+        clear: left;
+    }
+    #bio {
+        font-size: 22pt;
+    }
+    .mySkills {
+        top: 100px;
+        z-index: 0;
+    }
+    .skillDivs {
+        text-align: center;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "topRow"
+            "midRow"
+            "bottomRow";
+    }
+    .topRow {
+        grid-area: topRow;
+    }
+    .midRow {
+        grid-area: midRow;
+    }
+    .bottomRow {
+        grid-area: bottomRow;
+    }
+    .skillIcon {
+        font-size: 8em;
+    }
+    .nestedGrid {
+        padding: 3% 0 0 0;
+    }
+    .nestedGrid p {
+        padding: 0 10% 5% 10%;
+    }
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .caseStudy {
+        width: 100%;
+        text-align: center;
+    }
+    .myWork {
+        background-color: black;
+        position: relative;
+        top: 100px;
+        z-index: 0;
+    }
+    .contactBorder {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1%;
+    }
+    .contCont {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    #bio {
+        font-size: 21pt;
+    }
+    #bioBox {
+        padding: 18% 5% 5% 5%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #bio {
+        font-size: 20pt;
+    }
+    #bioBox {
+        padding: 22% 5% 5% 5%;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .topnav .burger {
+        display: block;
+        position: absolute;
+        margin: 0 auto;
+        padding: 30px 15px;
+        background-color: #3C6543;
+    }
+    .topnav .icon {
+        color: white;
+    }
+    .topnav .fa-2xl {
+        line-height: 1em;
+    }
+    .headerNav {
+        display: none;
+    }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .burger {
+        position: absolute;
+        top: 0;
+    }
+    .topnav.responsive .headerNav{
+        float: none;
+        display: block;
+        text-align: right;
+        white-space: wrap;
+        z-index: 5;
+    }
+    .navItem {
+        display: block;
+    }
+    .title {
+        width: 100%;
+    }
+    #bio {
+        font-size: 18pt;
+    }
+    #bioBox {
+        padding: 24% 5% 5% 5%;
+    }
+    .resumeButton {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    #bio {
+        font-size: 16pt;
+    }
+    .resumeButton {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .resumeButton {
+        width: 85%;
+    }
+}
+
+/* --------------- phones --------------- */
+@media only screen and (max-width: 650px){
+
+    h4 {
+        font-size: 14pt;
+    }
+    h5 {
+        font-size: 12pt;
+    }
+    ul {
+        text-align: center;
+    }
+    li {
+        font-size: 14pt;
+    }
+    header {
+        height:auto;
+    }
+    .headerBG {
+        height: 100%;
+    }
+    .yellowSplotch {
+        height:100%;
+    }
+    .headerContent {
+        height: auto;
+    }
+    .logo {
+        width: 97px;
+        height: 52px;
+        padding: auto;
+    }
+    .titleBlock {
+        width: 50%;
+    }
+    .heroSpace {
+        padding-bottom: 50px;
+    }
+    .heroContent {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+            "topLeft"
+            "rightContent"
+            "midLeft"
+            "bottomLeft";
+    }
+    #hi {
+        width: 100%;
+        padding: 10% 0 0 3%;
+    }
+    #bioBox {
+        padding: 10% 5%;
+    }
+    .greenSplotch {
+        top: 70px;
+        width: 100%;
+        height: 32%;
+    }
+    .magentaSplotch {
+        width: 100%;
+        top: 225px;
+    }
+    .mySkills {
+        top: 100px;
+        z-index: 0;
+    }
+    .skillDivs {
+        text-align: center;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "topRow"
+            "midRow"
+            "bottomRow";
+    }
+    .topRow {
+        grid-area: topRow;
+    }
+    .midRow {
+        grid-area: midRow;
+    }
+    .bottomRow {
+        grid-area: bottomRow;
+    }
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .caseStudy {
+        width: 100%;
+        text-align: center;
+    }
+    .myWork {
+        background-color: black;
+        position: relative;
+        top: 100px;
+        z-index: 0;
+    }
+    .workButton {
+        margin: 0 auto 10% auto;
+    }
+    footer {
+        top: 100px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    h1 {
+        font-size: 40pt;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    footer li {
+        padding: 0 5%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    h1 {
+        font-size: 36pt;
+    }
+    .formButton {
+        margin: 1% 5% 0 60%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    h1 {
+        font-size: 32pt;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    h1 {
+        font-size: 28pt;
+    }
+    footer li {
+        padding: 0 3%;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    h1 {
+        font-size: 24pt;
+    }
+}
